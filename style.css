@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e2937);
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    background: #1e2937;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  header {
+    text-align: center;
+    padding: 30px 20px 20px;
+    background: #0f172a;
+  }
+
+  .lock {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: #94a3b8;
+    font-size: 15px;
+  }
+
+  .password-box {
+    background: #0f172a;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-family: monospace;
+    letter-spacing: 2px;
+    text-align: center;
+    word-break: break-all;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .copy-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #334155;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .options {
+    padding: 20px 30px;
+  }
+
+  .option {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #cbd5e1;
+  }
+
+  .length-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .length-control button {
+    width: 40px;
+    height: 40px;
+    background: #334155;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #length {
+    width: 70px;
+    text-align: center;
+    font-size: 22px;
+    background: #0f172a;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+  }
+
+  .checkboxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f172a;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #3b82f6;
+  }
+
+  .strength {
+    margin-top: 25px;
+  }
+
+  .strength-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .strength-bar {
+    height: 12px;
+    background: #334155;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+
+  .strength-fill {
+    height: 100%;
+    width: 75%;
+    background: linear-gradient(90deg, #22c55e, #86efac);
+    border-radius: 9999px;
+    transition: all 0.4s;
+  }
+
+  button.generate {
+    width: 100%;
+    padding: 16px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 20px 30px;
+    transition: 0.3s;
+  }
+
+  button.generate:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+  }

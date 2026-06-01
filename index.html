@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+  <div class="container">
+    <header>
+      <div class="lock">🔒</div>
+      <h1>Gerador de Senhas</h1>
+      <p>Gere instantaneamente uma senha aleatória e segura</p>
+    </header>
+
+    <div class="password-box" id="password">
+      Clique em Gerar
+    </div>
+
+    <div class="options">
+      <!-- Comprimento -->
+      <div class="option">
+        <label>Número de caracteres</label>
+        <div class="length-control">
+          <button onclick="changeLength(-1)">−</button>
+          <input type="number" id="length" value="12" min="4" max="64" readonly>
+          <button onclick="changeLength(1)">+</button>
+        </div>
+      </div>
+
+      <!-- Características -->
+      <div class="option">
+        <label>Características da senha</label>
+        <div class="checkboxes">
+          <div class="checkbox-item">
+            <input type="checkbox" id="upper" checked>
+            <label for="upper">Letras maiúsculas</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="lower" checked>
+            <label for="lower">Letras minúsculas</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="numbers">
+            <label for="numbers">Números</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="symbols">
+            <label for="symbols">Símbolos</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Força da Senha -->
+      <div class="strength">
+        <div class="strength-label">
+          <span>Força da senha</span>
+          <span id="strength-text">Forte</span>
+        </div>
+        <div class="strength-bar">
+          <div class="strength-fill" id="strength-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="generate" onclick="generatePassword()">Gerar Nova Senha</button>
+  </div>
+</body>
+</html>
